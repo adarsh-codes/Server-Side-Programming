@@ -1,0 +1,56 @@
+<!-- hotel-booking.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Booking - [City Name]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Hotel Booking in Varanasi</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="heritage.html">Heritage</a></li>
+                <li><a href="hotel-booking.html">Hotel Booking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Book Your Stay</h2>
+            <form action="/submit-booking" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="check_in">Check-in Date:</label>
+                    <input type="date" id="check_in" name="check_in" required>
+                </div>
+                <div>
+                    <label for="check_out">Check-out Date:</label>
+                    <input type="date" id="check_out" name="check_out" required>
+                </div>
+                <div>
+                    <button type="submit">Book Now</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tourism Sites of Varanasi</p>
+    </footer>
+</body>
+</html>

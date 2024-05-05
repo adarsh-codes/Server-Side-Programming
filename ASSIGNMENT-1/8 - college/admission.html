@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admission - College Name</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>IET DAVV</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Devi_Ahilya_Vishwavidyalaya_Logo.png" alt="College Logo" width="100">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Admission</h2>
+        <form action="submit_admission_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <label for="contact">Contact Information:</label>
+            <input type="text" id="contact" name="contact" required><br>
+
+            <label for="education">Educational Background:</label>
+            <input type="text" id="education" name="education" required><br>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="English">English</option>
+                <option value="Sociology">Sociology</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Business Management">Business Management</option>
+                <option value="Accounting">Accounting</option>
+            </select><br>
+
+            <label for="additional-info">Additional Information:</label>
+            <textarea id="additional-info" name="additional-info" rows="4" cols="50"></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Contact Us: <a href="mailto:info@collegename.edu">info@collegename.edu</a></p>
+    </footer>
+</body>
+
+</html>
