@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Slideshow</title>
+    <style>
+      /* Styles for the slideshow */
+      #slideshow-container {
+        position: relative;
+        max-width: 500px;
+        margin: auto;
+      }
+      .slide {
+        display: none;
+        width: 100%;
+      }
+      .slide.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slideshow-container">
+      <img
+        class="slide active"
+        src="https://www.sportsadda.com/static-assets/waf-images/a8/86/57/16-9/jePzBDTSyv.jpg?v=1.6&w=1000"
+        alt="Slide 1"
+      />
+      <img
+        class="slide"
+        src="https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2023-06/ICC%20World%20Cup%2006112023.png?h=7150db6d&itok=WDsvvWyX"
+        alt="Slide 2"
+      />
+      <img
+        class="slide"
+        src="https://analyticsindiamag.com/wp-content/uploads/2023/11/ICC-Men-s-CWC-2023-Trophy-Tour-Barbados_Pic-1.jpg.webp"
+        alt="Slide 3"
+      />
+    </div>
+
+    <button onclick="prevSlide()">Previous</button>
+    <button onclick="nextSlide()">Next</button>
+
+    <script>
+      let currentSlideIndex = 0;
+      const slides = document.querySelectorAll('.slide');
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+      }
+
+      function prevSlide() {
+        currentSlideIndex =
+          (currentSlideIndex - 1 + slides.length) % slides.length;
+        showSlide(currentSlideIndex);
+      }
+    </script>
+  </body>
+</html>
